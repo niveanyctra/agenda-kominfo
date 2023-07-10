@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="{{ url('adminlte/css/adminlte.min.css') }}">
     <!-- Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+    <meta name="csrf_token" content="{{ csrf_token() }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
 
 
     <!-- Scripts -->
@@ -127,7 +132,7 @@
                     <a href="/" class="brand-link">
                         <img src="{{ url('adminlte/img/neper.png') }}" alt=""
                             class="brand-image img-circle elevation-3" style="opacity: .8">
-                        <span class="brand-text font-weight-light">Dispensasi</span>
+                        <span class="brand-text font-weight-light">Agenda Kegiatan</span>
                     </a>
 
                     <!-- Sidebar -->
@@ -150,65 +155,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('dispensasi.index') }}"
-                                        class="nav-link {{ request()->is('dispensasi*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-file-medical"></i>
+                                    <a href="{{ route('events.index') }}"
+                                        class="nav-link {{ request()->is('event*') ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-calendar"></i>
                                         <p>
-                                            Dispensasi
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('kelas.index') }}"
-                                        class="nav-link {{ request()->is('kelas*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-layer-group"></i>
-                                        <p>
-                                            Kelas
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('jurusan.index') }}"
-                                        class="nav-link {{ request()->is('jurusan*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-layer-group"></i>
-                                        <p>
-                                            Jurusan
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('jam.index') }}"
-                                        class="nav-link {{ request()->is('jam*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-clock"></i>
-                                        <p>
-                                            Jam Pelajaran
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('guru.index') }}"
-                                        class="nav-link {{ request()->is('guru*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-user-friends"></i>
-                                        <p>
-                                            Guru Piket
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('laporan') }}"
-                                        class="nav-link {{ request()->is('laporan*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-file-alt"></i>
-                                        <p>
-                                            Laporan
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('sekolah') }}"
-                                        class="nav-link {{ request()->is('sekolah*') ? 'active' : '' }}">
-                                        <i class="nav-icon fas fa-school"></i>
-                                        <p>
-                                            Sekolah
+                                            Event
                                         </p>
                                     </a>
                                 </li>
@@ -319,6 +270,168 @@
         });
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.8/index.global.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script>
+        const modal = $('#modal-action')
+        const csrfToken = $('meta[name=csrf_token]').attr('content');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            themeSystem: 'bootstrap5',
+            events: '{{ route('events.list') }}',
+            editable: true,
+            dateClick: function (info) {
+                $.ajax({
+                    url: `{{ route('events.create') }}`,
+                    data: {
+                        start_date: info.dateStr,
+                        end_date: info.dateStr
+                    },
+                    success: function (res) {
+                        modal.html(res).modal('show')
+                        $('.datepicker').datepicker();
+
+                        $('#form-action').on('submit', function(e) {
+                            e.preventDefault();
+                            const form = this
+                            const formData = new FormData(form)
+                            $.ajax({
+                                url: form.action,
+                                method: form.method,
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (res) {
+                                    modal.modal('hide')
+                                    calendar.refetchEvents()
+                                },
+                                error: function (res) {
+
+                                }
+                            })
+                        })
+                    }
+                })
+            },
+            eventClick: function ({ event }) {
+                $.ajax({
+                    url: `{{ url('events') }}/${event.id}/edit`,
+                    success: function (res) {
+                        modal.html(res).modal('show')
+
+                        $('#form-action').on('submit', function(e) {
+                            e.preventDefault();
+                            const form = this
+                            const formData = new FormData(form)
+                            $.ajax({
+                                url: form.action,
+                                method: form.method,
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (res) {
+                                    modal.modal('hide')
+                                    calendar.refetchEvents()
+                                }
+                            })
+                        })
+                    }
+                })
+            },
+            eventDrop: function (info){
+                const event = info.event
+                $.ajax({
+                    url: `{{ url('events') }}/${event.id}`,
+                    method: 'put',
+                    data: {
+                        id: event.id,
+                        start_date: event.startStr,
+                        end_date: event.end.toISOString().substring(0, 10),
+                        title: event.title,
+                        jam: event.extendedProps.jam,
+                        tempat: event.extendedProps.tempat,
+                        asal_surat: event.extendedProps.asal_surat,
+                        bidang_penanggung_jawab: event.extendedProps.bidang_penanggung_jawab,
+                        keterangan: event.extendedProps.keterangan,
+                        no_surat: event.extendedProps.no_surat,
+                        no_agenda: event.extendedProps.no_agenda,
+                        category: event.extendedProps.category
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN' : csrfToken,
+                        accept: 'application/json'
+                    },
+                    success: function (res) {
+                        iziToast.success({
+                            title: 'Success',
+                            message: res.message,
+                            position: 'topRight'
+                        });
+                    },
+                    error: function (res) {
+                        const message = res.responseJSON.message
+                        info.revert()
+                        iziToast.error({
+                            title: 'Error',
+                            message: message ?? 'Something went wrong',
+                            position: 'topRight'
+                        });
+                    }
+                })
+            },
+            eventResize: function (info) {
+                const {event} = info
+                $.ajax({
+                    url: `{{ url('events') }}/${event.id}`,
+                    method: 'put',
+                    data: {
+                        id: event.id,
+                        start_date: event.startStr,
+                        end_date: event.end.toISOString().substring(0, 10),
+                        title: event.title,
+                        jam: event.extendedProps.jam,
+                        tempat: event.extendedProps.tempat,
+                        asal_surat: event.extendedProps.asal_surat,
+                        bidang_penanggung_jawab: event.extendedProps.bidang_penanggung_jawab,
+                        keterangan: event.extendedProps.keterangan,
+                        no_surat: event.extendedProps.no_surat,
+                        no_agenda: event.extendedProps.no_agenda, 
+                        category: event.extendedProps.category
+                    },
+                    headers: {
+                        'X-CSRF-TOKEN' : csrfToken,
+                        accept: 'application/json'
+                    },
+                    success: function (res) {
+                        iziToast.success({
+                            title: 'Success',
+                            message: res.message,
+                            position: 'topRight'
+                        });
+                    },
+                    error: function (res) {
+                        const message = res.responseJSON.message
+                        info.revert()
+                        iziToast.error({
+                            title: 'Error',
+                            message: message ?? 'Something went wrong',
+                            position: 'topRight'
+                        });
+                    }
+                })
+            }
+            });
+            calendar.render();
+        });
+
+    </script>
 </body>
 
 </html>

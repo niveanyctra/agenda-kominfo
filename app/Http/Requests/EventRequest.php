@@ -25,6 +25,13 @@ class EventRequest extends FormRequest
             'start_date' => 'required|date_format:Y-m-d',
             'end_date' => 'required|date_format:Y-m-d',
             'title' => 'required',
+            'jam' => 'required',
+            'tempat' => 'required',
+            'asal_surat' => 'required',
+            'bidang_penanggung_jawab' => 'required',
+            'keterangan' => 'required',
+            'no_surat' => 'required',
+            'no_agenda' => 'required',
             'category' => 'required'
         ];
     }

@@ -16,6 +16,13 @@ return new class extends Migration
             $table->string('title');
             $table->date('start_date');
             $table->date('end_date');
+            $table->time('jam');
+            $table->string('tempat');
+            $table->string('asal_surat');
+            $table->string('bidang_penanggung_jawab');
+            $table->string('keterangan');
+            $table->string('no_surat');
+            $table->integer('no_agenda');
             $table->string('category');
             $table->timestamps();
         });

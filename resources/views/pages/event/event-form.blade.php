@@ -15,7 +15,42 @@
         </div>
         <div class="col-12">
             <div class="mb-3">
-                <textarea name="title" class="form-control">{{ $data->title }}</textarea>
+                <input type="time" name="jam" value="{{ $data->jam ?? request()->jam }}" class="form-control" >
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <textarea  name="title" class="form-control" placeholder="Kegiatan">{{ $data->title }}</textarea>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="text" name="tempat" value="{{ $data->tempat }}" class="form-control" placeholder="Tempat">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="text" name="asal_surat" value="{{ $data->asal_surat }}" class="form-control" placeholder="Asal Surat">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="text" name="bidang_penanggung_jawab" value="{{ $data->bidang_penanggung_jawab }}" class="form-control" placeholder="Bidang Penanggung Jawab">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="text" name="keterangan" value="{{ $data->keterangan }}" class="form-control" placeholder="Keterangan">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="text" name="no_surat" value="{{ $data->no_surat }}" class="form-control" placeholder="No Surat">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="number" name="no_agenda" class="form-control" value="{{ $data->no_agenda }}" placeholder="No Agenda">
             </div>
         </div>
         <div class="col-12">

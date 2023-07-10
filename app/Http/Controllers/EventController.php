@@ -10,7 +10,8 @@ class EventController extends Controller
 {
     public function index()
     {
-        return view('pages.event.event');
+        $event = Event::get();
+        return view('pages.event.event', compact('event'));
     }
 
     public function listEvent(Request $request)
@@ -25,6 +26,13 @@ class EventController extends Controller
             'title' => $item->title,
             'start' => $item->start_date,
             'end' => date('Y-m-d', strtotime($item->end_date.'+1 days')),
+            'jam' => $item->jam,
+            'tempat' => $item->tempat,
+            'asal_surat' => $item->asal_surat,
+            'bidang_penanggung_jawab' => $item->bidang_penanggung_jawab,
+            'keterangan' => $item->keterangan,
+            'no_surat' => $item->no_surat,
+            'no_agenda' => $item->no_agenda,
             'category' => $item->category,
             'className' => ['bg-'.$item->category]
         ]);
@@ -76,6 +84,13 @@ class EventController extends Controller
         $event->start_date = $request->start_date;
         $event->end_date = $request->end_date;
         $event->title = $request->title;
+        $event->jam = $request->jam;
+        $event->tempat = $request->tempat;
+        $event->asal_surat = $request->asal_surat;
+        $event->bidang_penanggung_jawab = $request->bidang_penanggung_jawab;
+        $event->keterangan = $request->keterangan;
+        $event->no_surat = $request->no_surat;
+        $event->no_agenda = $request->no_agenda;
         $event->category = $request->category;
 
         $event->save();

@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div id="modal-action" class="modal" tabindex="-1">
+    <div id="modal-action1" class="modal" tabindex="-1">
 
     </div>
 
@@ -49,7 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
     <script>
-        const modal = $('#modal-action')
+        const modal = $('#modal-action1')
         const csrfToken = $('meta[name=csrf_token]').attr('content');
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -59,46 +59,13 @@
             themeSystem: 'bootstrap5',
             events: '{{ route('events.list') }}',
             editable: true,
-            dateClick: function (info) {
-                $.ajax({
-                    url: `{{ route('events.create') }}`,
-                    data: {
-                        start_date: info.dateStr,
-                        end_date: info.dateStr
-                    },
-                    success: function (res) {
-                        modal.html(res).modal('show')
-                        $('.datepicker').datepicker();
-
-                        $('#form-action').on('submit', function(e) {
-                            e.preventDefault();
-                            const form = this
-                            const formData = new FormData(form)
-                            $.ajax({
-                                url: form.action,
-                                method: form.method,
-                                data: formData,
-                                processData: false,
-                                contentType: false,
-                                success: function (res) {
-                                    modal.modal('hide')
-                                    calendar.refetchEvents()
-                                },
-                                error: function (res) {
-
-                                }
-                            })
-                        })
-                    }
-                })
-            },
             eventClick: function ({ event }) {
                 $.ajax({
-                    url: `{{ url('events') }}/${event.id}/edit`,
+                    url: `{{ url('events') }}/${event.id}/detail`,
                     success: function (res) {
                         modal.html(res).modal('show')
 
-                        $('#form-action').on('submit', function(e) {
+                        $('#form-action1').on('submit', function(e) {
                             e.preventDefault();
                             const form = this
                             const formData = new FormData(form)

@@ -26,7 +26,7 @@
                                 <span class="text-blue-600"> {{ Auth::user()->name }}!</span>
                             </h2>
                             <p class="font-semibold text-gray-700">
-                                Di Website Aplikasi Izin Keluar Lingkungan Sekolah
+                                Di Website Agenda Kegiatan KOMINFO Kabupaten Cirebon
                             </p>
                         </div>
                     </div>
@@ -44,53 +44,11 @@
 
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>{{ $dispensasi }}</h3>
-                        <p>Dispensasi</p>
+                        <h3>{{ $event }}</h3>
+                        <p>Event</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-file-medical"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-6">
-
-                <div class="small-box bg-success">
-                    <div class="inner">
-                        <h3>{{ $kelas }}</h3>
-                        <p>Kelas</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-6">
-
-                <div class="small-box bg-warning">
-                    <div class="inner">
-                        <h3>{{ $jurusan }}</h3>
-                        <p>Jurusan</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-6">
-
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                        <h3>{{ $guru }}</h3>
-                        <p>Guru Piket</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-user-friends"></i>
+                        <i class="fas fa-calendar"></i>
                     </div>
                     <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
