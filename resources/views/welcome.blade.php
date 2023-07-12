@@ -14,20 +14,20 @@
 <body>
     <nav id="navbar" class="navbar">
         @if (Route::has('login'))
-            <ul>
+            <div class="row m-2">
                 @auth
-                    <li><a href="{{ url('/dashboard') }}" class="getstarted">Dashboard</a>
-                    </li>
+                    <div class="col-12"><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
+                    </div>
                 @else
-                    <li><a href="{{ route('login') }}" class="getstarted">Log
-                            in</a></li>
+                    <div class="col-6"><a href="{{ route('login') }}" class="btn btn-primary">Log
+                            in</a></div>
 
                     @if (Route::has('register'))
-                        <li><a href="{{ route('register') }}" class="getstarted">Register</a>
-                        </li>
+                        <div class="col-6"><a href="{{ route('register') }}" class="btn btn-success">Register</a>
+                        </div>
                     @endif
                 @endauth
-            </ul>
+            </div>
             <i class="bi bi-list mobile-nav-toggle"></i>
         @endif
     </nav>

@@ -163,6 +163,15 @@
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('laporan') }}"
+                                        class="nav-link {{ request()->is('laporan*') ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file-alt"></i>
+                                        <p>
+                                            Laporan
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                         <!-- /.sidebar-menu -->
@@ -232,7 +241,7 @@
                 <!-- /.content-wrapper -->
 
                 <footer class="main-footer">
-                    <strong>Copyright &copy; CodingDay <a href="https://adminlte.io">SMKN 1 Kota Cirebon</a>.</strong>
+                    <strong>Copyright &copy; PKL <a href="https://adminlte.io">SMKN 1 Kota Cirebon</a>.</strong>
                 </footer>
 
                 <!-- Control Sidebar -->
@@ -402,7 +411,7 @@
                         bidang_penanggung_jawab: event.extendedProps.bidang_penanggung_jawab,
                         keterangan: event.extendedProps.keterangan,
                         no_surat: event.extendedProps.no_surat,
-                        no_agenda: event.extendedProps.no_agenda, 
+                        no_agenda: event.extendedProps.no_agenda,
                         category: event.extendedProps.category
                     },
                     headers: {

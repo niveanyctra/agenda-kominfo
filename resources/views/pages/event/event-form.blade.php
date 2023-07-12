@@ -20,56 +20,64 @@
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="title">Kegiatan : </label>
                 <textarea  name="title" class="form-control" placeholder="Kegiatan">{{ $data->title }}</textarea>
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="tempat">Tempat : </label>
                 <input type="text" name="tempat" value="{{ $data->tempat }}" class="form-control" placeholder="Tempat">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="asal_surat">Asal Surat : </label>
                 <input type="text" name="asal_surat" value="{{ $data->asal_surat }}" class="form-control" placeholder="Asal Surat">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="bidang_penanggung_jawab">Bidang Penanggung Jawab : </label>
                 <input type="text" name="bidang_penanggung_jawab" value="{{ $data->bidang_penanggung_jawab }}" class="form-control" placeholder="Bidang Penanggung Jawab">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="keterangan">Keterangan : </label>
                 <input type="text" name="keterangan" value="{{ $data->keterangan }}" class="form-control" placeholder="Keterangan">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="no_surat">No Surat : </label>
                 <input type="text" name="no_surat" value="{{ $data->no_surat }}" class="form-control" placeholder="No Surat">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="no_agenda">No Agenda : </label>
                 <input type="number" name="no_agenda" class="form-control" value="{{ $data->no_agenda }}" placeholder="No Agenda">
             </div>
         </div>
         <div class="col-12">
             <div class="mb-3">
+                <label for="category">Warna : </label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" {{ $data->category == 'success' ? 'checked' : null }} type="radio" name="category" id="category-success" value="success">
-                        <label class="form-check-label" for="category-success">Success</label>
+                        <label class="form-check-label" for="category-success">Hijau</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" {{ $data->category == 'danger' ? 'checked' : null }} type="radio" name="category" id="category-danger" value="danger">
-                        <label class="form-check-label" for="category-danger">Danger</label>
+                        <label class="form-check-label" for="category-danger">Merah</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" {{ $data->category == 'warning' ? 'checked' : null }} type="radio" name="category" id="category-warning" value="warning">
-                        <label class="form-check-label" for="category-warning">Warning</label>
+                        <label class="form-check-label" for="category-warning">Kuning</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" {{ $data->category == 'info' ? 'checked' : null }} type="radio" name="category" id="category-info" value="info">
-                        <label class="form-check-label" for="category-info">Info</label>
+                        <label class="form-check-label" for="category-info">Biru</label>
                     </div>
             </div>
             <div class="col-12">
