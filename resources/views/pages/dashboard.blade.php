@@ -44,8 +44,8 @@
 
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>{{ $event }}</h3>
-                        <p>Event</p>
+                        <h3>{{ $januari }}</h3>
+                        <p>Januari</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-calendar"></i>
@@ -53,6 +53,149 @@
                     <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $februari }}</h3>
+                        <p>Februari</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $maret }}</h3>
+                        <p>Maret</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $april }}</h3>
+                        <p>April</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $mei }}</h3>
+                        <p>Mei</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $juni }}</h3>
+                        <p>Juni</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $juli }}</h3>
+                        <p>Juli</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $agustus }}</h3>
+                        <p>Agustus</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $september }}</h3>
+                        <p>September</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $oktober }}</h3>
+                        <p>Oktober</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $november }}</h3>
+                        <p>November</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>{{ $desember }}</h3>
+                        <p>Desember</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+                </div>
 
         </div>
     </div>
