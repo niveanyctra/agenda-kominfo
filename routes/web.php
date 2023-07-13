@@ -82,5 +82,7 @@ Route::resource('events', EventController::class)->only([
 ]);
 
 Route::get('events/edit', [EventController::class, 'listEvent'])->name('events.list');
+Route::get('laporan', [LaporanController::class, 'index'])->name('laporan');
+Route::get('filter/{txtTglAwal}/{txtTglAkhir}', [LaporanController::class, 'filter'])->name('filter');
 
 
