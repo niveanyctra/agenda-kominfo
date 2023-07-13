@@ -163,7 +163,16 @@
                                         </p>
                                     </a>
                                 </li>
-                               
+                                <li class="nav-item">
+                                    <a href="{{ route('laporan') }}"
+                                        class="nav-link {{ request()->is('laporan*') ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-file-alt"></i>
+                                        <p>
+                                            Laporan
+                                        </p>
+                                    </a>
+                                </li>
+
                             </ul>
                         </nav>
                         <!-- /.sidebar-menu -->
