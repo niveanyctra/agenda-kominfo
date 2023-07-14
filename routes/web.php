@@ -38,40 +38,52 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         $januari = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [1])
+                ->whereMonth('start_date', 1)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $februari = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [2])
+                ->whereMonth('start_date', 2)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $maret = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [3])
+                ->whereMonth('start_date', 3)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $april = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [4])
+                ->whereMonth('start_date', 4)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $mei = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [5])
+                ->whereMonth('start_date', 5)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $juni = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [6])
+                ->whereMonth('start_date', 6)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $juli = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [7])
+                ->whereMonth('start_date', 7)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $agustus = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [8])
+                ->whereMonth('start_date', 8)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $september = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [9])
+                ->whereMonth('start_date', 9)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $oktober = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [10])
+                ->whereMonth('start_date', 10)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $november = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [11])
+                ->whereMonth('start_date', 11)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         $desember = $count = DB::table('events')
-                ->whereRaw('MONTH(start_date) = ?', [12])
+                ->whereMonth('start_date', 12)
+                ->whereYear('start_date', date('Y'))
                 ->count('id');
         return view('pages.dashboard', compact('januari','februari','maret','april','mei','juni','juli','agustus','september','oktober','november','desember'));
     })->name('dashboard');
