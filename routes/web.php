@@ -15,6 +15,7 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\DispensasiController;
 use App\Http\Controllers\JamPelajaranController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ use App\Http\Controllers\JamPelajaranController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::middleware([
@@ -78,6 +79,9 @@ Route::middleware([
 });
 
 Route::resource('events', EventController::class)->only([
+    'index', 'create', 'store', 'edit', 'update', 'destroy'
+]);
+Route::resource('user', UserController::class)->only([
     'index', 'create', 'store', 'edit', 'update', 'destroy'
 ]);
 

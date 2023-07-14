@@ -164,6 +164,15 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="{{ route('user.index') }}"
+                                        class="nav-link {{ request()->is('user*') ? 'active' : '' }}">
+                                        <i class="nav-icon fas fa-user"></i>
+                                        <p>
+                                            User
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{ route('laporan') }}"
                                         class="nav-link {{ request()->is('laporan*') ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-file-alt"></i>

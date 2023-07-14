@@ -21,11 +21,6 @@
                 @else
                     <div class="col-12"><a href="{{ route('login') }}" class="btn btn-primary">Log
                             in</a></div>
-
-                    @if (Route::has('register'))
-                        <div class="col-6"><a href="{{ route('register') }}" class="btn btn-success">Register</a>
-                        </div>
-                    @endif
                 @endauth
             </div>
             <i class="bi bi-list mobile-nav-toggle"></i>
