@@ -94,7 +94,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $mei }}</h3>
                         <p>Mei</p>
@@ -107,7 +107,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $juni }}</h3>
                         <p>Juni</p>
@@ -120,7 +120,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $juli }}</h3>
                         <p>Juli</p>
@@ -133,7 +133,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>{{ $agustus }}</h3>
                         <p>Agustus</p>
@@ -146,7 +146,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $september }}</h3>
                         <p>September</p>
@@ -159,7 +159,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $oktober }}</h3>
                         <p>Oktober</p>
@@ -172,7 +172,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $november }}</h3>
                         <p>November</p>
@@ -185,7 +185,7 @@
             </div>
             <div class="col-lg-3 col-6">
 
-                <div class="small-box bg-info">
+                <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $desember }}</h3>
                         <p>Desember</p>
