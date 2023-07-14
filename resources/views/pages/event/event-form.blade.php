@@ -61,30 +61,30 @@
             </div>
         </div>
         <div class="col-12">
-            <div class="mb-3">
+            <div class="mb-3 d-flex">
                 <label for="category">Warna : </label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" {{ $data->category == 'success' ? 'checked' : null }} type="radio" name="category" id="category-success" value="success">
-                        <label class="form-check-label" for="category-success">Hijau</label>
+                    <div class="form-check">
+                        <input class="default:ring-3" {{ $data->category == 'success' ? 'checked' : null }} type="radio" name="category" id="category-success" value="success">
+                        <label class="form-check-label" for="category-success"> Hijau</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" {{ $data->category == 'danger' ? 'checked' : null }} type="radio" name="category" id="category-danger" value="danger">
+                    <div class="form-check">
+                        <input class="default:ring-3" {{ $data->category == 'danger' ? 'checked' : null }} type="radio" name="category" id="category-danger" value="danger">
                         <label class="form-check-label" for="category-danger">Merah</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" {{ $data->category == 'warning' ? 'checked' : null }} type="radio" name="category" id="category-warning" value="warning">
+                    <div class="form-check">
+                        <input class="default:ring-3" {{ $data->category == 'warning' ? 'checked' : null }} type="radio" name="category" id="category-warning" value="warning">
                         <label class="form-check-label" for="category-warning">Kuning</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" {{ $data->category == 'info' ? 'checked' : null }} type="radio" name="category" id="category-info" value="info">
+                    <div class="form-check">
+                        <input class="default:ring-3" {{ $data->category == 'info' ? 'checked' : null }} type="radio" name="category" id="category-info" value="info">
                         <label class="form-check-label" for="category-info">Biru</label>
                     </div>
             </div>
             <div class="col-12">
                 <div class="mb-3">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="delete" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Delete</label>
+                        <input class="form-check-input" type="checkbox" name="delete" role="switch" id="delete">
+                        <label class="form-check-label" for="delete">Hapus Kegiatan</label>
                     </div>
                 </div>
             </div>

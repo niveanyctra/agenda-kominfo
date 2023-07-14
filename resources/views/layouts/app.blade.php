@@ -303,7 +303,7 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            themeSystem: 'bootstrap5',
+            themeSystem: 'standard',
             events: '{{ route('events.list') }}',
             editable: true,
             dateClick: function (info) {
