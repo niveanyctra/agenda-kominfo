@@ -41,159 +41,157 @@
         </div>
         <div class="row pt-5">
             <div class="col-lg-3 col-6">
-
                 <div class="small-box bg-info">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Januari</p>
                         <h3>{{ $januari }}</h3>
-                        <p>Januari</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
-
                 <div class="small-box bg-info">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Februari</p>
                         <h3>{{ $februari }}</h3>
-                        <p>Februari</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-info">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Maret</p>
                         <h3>{{ $maret }}</h3>
-                        <p>Maret</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-info">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">April</p>
                         <h3>{{ $april }}</h3>
-                        <p>April</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-warning">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Mei</p>
                         <h3>{{ $mei }}</h3>
-                        <p>Mei</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-warning">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Juni</p>
                         <h3>{{ $juni }}</h3>
-                        <p>Juni</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-warning">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Juli</p>
                         <h3>{{ $juli }}</h3>
-                        <p>Juli</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-warning">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Agustus</p>
                         <h3>{{ $agustus }}</h3>
-                        <p>Agustus</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-danger">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">September</p>
                         <h3>{{ $september }}</h3>
-                        <p>September</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-danger">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Oktober</p>
                         <h3>{{ $oktober }}</h3>
-                        <p>Oktober</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-danger">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">November</p>
                         <h3>{{ $november }}</h3>
-                        <p>November</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
 
                 <div class="small-box bg-danger">
                     <div class="inner">
+                        <p style="font-weight: bold; font-size:25px">Desember</p>
                         <h3>{{ $desember }}</h3>
-                        <p>Desember</p>
+                        <p>Kegiatan</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" style="padding-top:12px"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
                 </div>
 
