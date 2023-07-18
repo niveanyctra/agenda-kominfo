@@ -1,8 +1,6 @@
     <x-app-layout>
-        <x-slot name="header">
-            <h2 class="font-semibold text-2xl leading-tight">
-                {{ __('Event') }}
-            </h2>
+        <x-slot>
+
         </x-slot>
     <div class="container">
         <div class="row">

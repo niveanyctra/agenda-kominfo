@@ -3,18 +3,21 @@
         @method('put')
     @endif
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <div class="mb-3">
+                <label for="start_date">Start Date :</label>
                 <input type="date" name="start_date" value="{{ $data->start_date ?? request()->start_date }}" class="form-control datepicker">
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <div class="mb-3">
+                <label for="end_date">End Date :</label>
                 <input type="date" name="end_date" value="{{ $data->end_date ?? request()->end_date }}" class="form-control datepicker">
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-4">
             <div class="mb-3">
+                <label for="jam">Jam :</label>
                 <input type="time" name="jam" value="{{ $data->jam ?? request()->jam }}" class="form-control" >
             </div>
         </div>

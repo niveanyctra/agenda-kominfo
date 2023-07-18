@@ -124,6 +124,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'multiMonthYear,dayGridMonth,listMonth'
+            },
             initialView: 'dayGridMonth',
             themeSystem: 'bootstrap5',
             events: '{{ route('events.list') }}',
