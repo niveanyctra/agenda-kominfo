@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Agenda Kegiatan Kominfo') }}</title>
+    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
+    {{--  <title>{{ config('app.name', 'Agenda Kegiatan Kominfo') }}</title>  --}}
 
     <link rel="shortcut icon" href="/adminlte/img/logo.png" type="image/x-icon">
 
