@@ -20,8 +20,8 @@
                         value="{{ old('txtTglAkhir') }}" size="10">
                     </div>
                     <div class="col-md-1" style="padding-top: 33px">
-                        <a onclick="this.href='/filter/'+ document.getElementById('txtTglAwal').value + '/' + document.getElementById('txtTglAkhir').value "
-                        target="_blank" class="btn btn-primary">Cetak</a>
+                        <a onclick="this.href='/laporan/filter/'+ document.getElementById('txtTglAwal').value + '/' + document.getElementById('txtTglAkhir').value "
+                        class="btn btn-primary">Cetak</a>
                     </div>
                 </div>
         {{--  </form>  --}}

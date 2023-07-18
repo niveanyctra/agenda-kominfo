@@ -1,20 +1,9 @@
 <?php
 
-use App\Models\Guru;
-use App\Models\Event;
-use App\Models\Kelas;
-use App\Models\Jurusan;
-use App\Models\Dispensasi;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GuruController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\KelasController;
-use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\SekolahController;
-use App\Http\Controllers\DispensasiController;
-use App\Http\Controllers\JamPelajaranController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -99,6 +88,6 @@ Route::resource('user', UserController::class)->only([
 
 Route::get('events/edit', [EventController::class, 'listEvent'])->name('events.list');
 Route::get('laporan', [LaporanController::class, 'index'])->name('laporan');
-Route::get('filter/{txtTglAwal}/{txtTglAkhir}', [LaporanController::class, 'filter'])->name('filter');
+Route::get('laporan/filter/{txtTglAwal}/{txtTglAkhir}', [LaporanController::class, 'filter'])->name('filter');
 
 
