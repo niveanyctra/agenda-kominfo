@@ -35,7 +35,7 @@ class EventController extends Controller
             'no_surat' => $item->no_surat,
             'no_agenda' => $item->no_agenda,
             'category' => $item->category,
-            'className' => ['bg-'.$item->category]
+            'className' => ['bg-'.$item->category, 'text-black']
         ]);
 
         return response()->json($events);
