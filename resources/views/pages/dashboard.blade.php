@@ -40,6 +40,21 @@
             </div>
         </div>
         <div class="row pt-5">
+            <div class="col-5 pb-3">
+                <form method="get">
+                    @csrf
+                    <input type="submit" name="prev"
+                            value="Tahun Lalu" class="btn btn-sm btn-outline-primary"/>
+                    <input type="submit" name="now"
+                            value="Tahun Ini" class="btn btn-sm btn-outline-primary"/>
+                    <input type="submit" name="next"
+                            value="Tahun Depan" class="btn btn-sm btn-outline-primary"/>
+                </form>
+            </div>
+            <div class="col-7 mb-4">
+
+                <p style="font-size:30px; font-weight:bolder">{{ $year }}</p>
+            </div>
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-info">
                     <div class="inner">
