@@ -36,6 +36,9 @@ Route::middleware([
         if(isset($_GET['prev'])) {
             $year = Carbon::now()->subYears(1)->format('Y');
         }
+        else if(isset($_GET['prev2'])) {
+            $year = Carbon::now()->subYears(2)->format('Y');
+        }
          else if(isset($_GET['now'])) {
             $year = Carbon::now()->format('Y');
         }

@@ -40,9 +40,11 @@
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-5 pb-3">
+            <div class="col-5 pt-2">
                 <form method="get">
                     @csrf
+                    <input type="submit" name="prev2"
+                            value="2 Tahun Lalu" class="btn btn-sm btn-outline-primary"/>
                     <input type="submit" name="prev"
                             value="Tahun Lalu" class="btn btn-sm btn-outline-primary"/>
                     <input type="submit" name="now"
