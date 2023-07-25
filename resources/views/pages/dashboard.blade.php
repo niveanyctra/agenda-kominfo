@@ -47,8 +47,8 @@
                             value="Tahun Lalu" class="btn btn-sm btn-outline-primary"/>
                     <input type="submit" name="now"
                             value="Tahun Ini" class="btn btn-sm btn-outline-primary"/>
-                    <input type="submit" name="next"
-                            value="Tahun Depan" class="btn btn-sm btn-outline-primary"/>
+                    {{--  <input type="submit" name="next"
+                            value="Tahun Depan" class="btn btn-sm btn-outline-primary"/>  --}}
                 </form>
             </div>
             <div class="col-7 mb-4">
