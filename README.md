@@ -29,22 +29,22 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/reanzyy/app-izin-siswa">
+  <a href="https://github.com/niveanyctra/agenda-kominfo">
     <img src="/frontend/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Aplikasi E-Dispensasi SMKN 1 Cirebon</h3>
+  <h3 align="center">Aplikasi Agenda Kegiatan KOMINFO</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/reanzyy/app-izin-siswa"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/niveanyctra/agenda-kominfo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/reanzyy/app-izin-siswa">View Demo</a>
+    <a href="https://github.com/niveanyctra/agenda-kominfo">View Demo</a>
     ·
-    <a href="https://github.com/reanzyy/app-izin-siswa/issues">Report Bug</a>
+    <a href="https://github.com/niveanyctra/agenda-kominfo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/reanzyy/app-izin-siswa/issues">Request Feature</a>
+    <a href="https://github.com/niveanyctra/agenda-kominfo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -133,18 +133,29 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/niveanyctra/agenda-kominfo
+   ```
+2. Install Composer Package
+   ```sh
+   composer install
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Run NPM
+   ```sh
+   npm run build
+   ```
+5. Generate Key
+   ```sh
+   php artisan key:generate
+   ```
+6. Migrate Database with Seed
+   ```sh
+   php artisan migrate --seed
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -173,7 +184,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/reanzyy/app-izin-siswa/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/niveanyctra/agenda-kominfo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -238,15 +249,15 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/reanzyy/app-izin-siswa/graphs/contributors
+[contributors-url]: https://github.com/niveanyctra/agenda-kominfo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/reanzyy/app-izin-siswa/network/members
+[forks-url]: https://github.com/niveanyctra/agenda-kominfo/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/reanzyy/app-izin-siswa/stargazers
+[stars-url]: https://github.com/niveanyctra/agenda-kominfo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/reanzyy/app-izin-siswa/issues
+[issues-url]: https://github.com/niveanyctra/agenda-kominfo/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/reanzyy/app-izin-siswa/blob/master/LICENSE.txt
+[license-url]: https://github.com/niveanyctra/agenda-kominfo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
