@@ -153,9 +153,9 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    php artisan key:generate
    ```
-6. Migrate Database with Seed
+6. Migrate Database
    ```sh
-   php artisan migrate --seed
+   php artisan migrate
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
