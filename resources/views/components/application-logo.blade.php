@@ -1,1 +1,1 @@
-<img src="{{ url('adminlte/img/neper.png') }}" alt="">
+<img src="{{ url('adminlte/img/cirebonkab.png') }}" alt="">

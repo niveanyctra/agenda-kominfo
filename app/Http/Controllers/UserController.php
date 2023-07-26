@@ -26,6 +26,13 @@ class UserController extends Controller
 
     public function store( Request $request)
     {
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => $this->passwordRules(),
+            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+        ])->validate();
+
         User::insert([
             'name' => $request->name,
             'email' => $request->email,
@@ -37,7 +44,7 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
-        USer::where('id', $user->id)->delete();
+        User::where('id', $user->id)->delete();
 
         return redirect('user')->with('delete', 'Data berhasil dihapus');
     }

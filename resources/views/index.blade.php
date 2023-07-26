@@ -9,7 +9,9 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
-    <title>Document</title>
+    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
+
+    <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
 </head>
 <body>
     <nav id="navbar" class="navbar">
@@ -23,7 +25,6 @@
                             in</a></div>
                 @endauth
             </div>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         @endif
     </nav>
     <div class="container">

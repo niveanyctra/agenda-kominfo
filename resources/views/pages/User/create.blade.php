@@ -5,8 +5,10 @@
         </h2>
     </x-slot>
 
-    <div class="shadow overflow-hidden sm-rounded-md mt-5 mx-4">
+
+    <div class="shadow overflow-hidden sm-rounded-md mt-5 mx-4 mb-5">
         <div class="px-4 py-5 bg-white sm:p-6 ">
+            <x-validation-errors class="mb-4" />
             <form action="{{ route('user.store') }}" method="post">
                 @csrf
 

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
     {{--  <title>{{ config('app.name', 'Agenda Kegiatan Kominfo') }}</title>  --}}
+    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
 
-    <link rel="shortcut icon" href="/adminlte/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
 
 
     <!-- Fonts -->
@@ -139,8 +139,8 @@
                 <aside class="main-sidebar main-sidebar-custom sidebar-light-primary elevation-4">
                     <!-- Brand Logo -->
                     <a href="/" class="brand-link">
-                        <img src="{{ url('adminlte/img/neper.png') }}" alt=""
-                            class="brand-image img-circle elevation-3" style="opacity: .8">
+                        <img src="{{ url('adminlte/img/cirebonkab.png') }}" alt=""
+                            class="brand-image " style="opacity: .8">
                         <span class="brand-text font-weight-light">Agenda Kegiatan</span>
                     </a>
 

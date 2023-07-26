@@ -6,7 +6,7 @@
 
         <p>Pada tanggal {{ $txtTglAwal }} s/d tanggal {{ $txtTglAkhir }}</p>
     </x-slot>
-    <div class="shadow overflow-hidden sm-rounded-md my-5">
+    <div class="shadow overflow-hidden sm-rounded-md my-5 mt-5">
         <div class="px-4 py-4 bg-white sm:p-6 ">
         <table class="table table-bordered" id="mauexport" align="center">
             <thead>
