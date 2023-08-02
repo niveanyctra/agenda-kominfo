@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-12 my-3">
                 <div class="row my-3">
-                    <div class="col-10"></div>
-                    <div class="col-2"><button type="button" data-toggle="modalTambah" data-target="#tambahModal" class="btn btn-primary">Tambah</a></div>
+                    {{--  <div class="col-10"></div>  --}}
+                    <div class="col-12"><button type="button" data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-outline-primary">Tambah Kegiatan</button></div>
                 </div>
                 <div id='calendar'></div>
             </div>
@@ -14,34 +14,34 @@
     <div id="modal-action" class="modal" tabindex="-1">
 
     </div>
-    <div id="tambahModal" class="modal"  tabindex="-1">
+    <div id="tambahModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
+      <form action="{{ route('events.store') }}" method="post">
+          @csrf
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" >Tambah Data</h5>
         {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
       </div>
       <div class="modal-body">
-        <form action="" method="post">
-            @csrf
 
             <div class="row">
                 <div class="col-4">
                     <div class="mb-3">
                         <label for="start_date">Start Date :</label>
-                        <input type="date" name="start_date" value="{{ $data->start_date ?? request()->start_date }}" class="form-control datepicker">
+                        <input type="date" name="start_date" class="form-control">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="mb-3">
                         <label for="end_date">End Date :</label>
-                        <input type="date" name="end_date" value="{{ $data->end_date ?? request()->end_date }}" class="form-control datepicker">
+                        <input type="date" name="end_date"  class="form-control">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="mb-3">
                         <label for="jam">Jam :</label>
-                        <input type="time" name="jam" value="{{ $data->jam ?? request()->jam }}" class="form-control" >
+                        <input type="time" name="jam"  class="form-control" >
                     </div>
                 </div>
                 <div class="col-12">
@@ -106,23 +106,15 @@
                                 <label class="form-check-label" for="category-info">Biru</label>
                             </div>
                     </div>
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" name="delete" role="switch" id="delete">
-                                <label class="form-check-label" for="delete">Hapus Kegiatan</label>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="Submit" class="btn btn-primary">Save changes</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="Submit" class="btn btn-outline-primary">Save changes</button>
+        </div>
     </div>
+</form>
   </div>
 </div>
 

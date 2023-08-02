@@ -96,10 +96,10 @@ class EventController extends Controller
 
         $event->save();
 
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Save data successfully'
-        ]);
+        // return response()->json([
+        //     'status' => 'success',
+        //     'message' => 'Save data successfully'
+        // ]);
     }
 
     /**
