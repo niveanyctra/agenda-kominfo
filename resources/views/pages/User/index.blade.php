@@ -25,8 +25,8 @@
                             <td>{{ $item->email }}</td>
                             <td>
                                 <div class="flex gap-1">
-                                    {{--  <a href="{{ route('user.edit', $item->id) }}"
-                                        class="btn btn-warning btn-sm">Edit</a>  --}}
+                                    <a href="{{ route('user.edit', $item->id) }}"
+                                        class="btn btn-warning btn-sm">Edit</a>
 
                                     <form action="{{ route('user.destroy', $item->id) }}" method="POST">
                                         @csrf
