@@ -14,18 +14,18 @@
     <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
 </head>
 <body>
-    <nav id="navbar" class="navbar bg-success">
+    <nav id="navbar" class="navbar bg-primary">
         @if (Route::has('login'))
-            <div class="container-fluid">
-                    <div class="col-8 px-5 fs-4">
-                    <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center">
-                        Agenda KOMINFO
+            <div class="container">
+                    <div class="d-flex">
+                    <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class="d-inline-block me-3 align-text-center">
+                        <h3 class="header nav-brand mt-1 text-white">Agenda Kominfo Kab. Cirebon</h3>
                     </div>
                 @auth
-                    <div class="col-3 ps-5"><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
+                    <div class="ps-5"><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
                     </div>
                 @else
-                    <div class="col-3 ps-5"><a href="{{ route('login') }}" class="btn btn-primary">Log
+                    <div class="ps-5"><a href="{{ route('login') }}" class="btn btn-success">Log
                             in</a></div>
                 @endauth
             </div>
