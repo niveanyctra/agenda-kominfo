@@ -12,25 +12,57 @@
     <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
 
     <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
+    <style>
+
+        @media only screen and (max-width: 425px) {
+            .fc .fc-multimonth {
+                border: 1px solid var(--fc-border-color);
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden auto;
+                height: 60vh;
+            }
+            .fc .fc-scrollgrid-liquid {
+                min-height: 47vh;
+                height: 100%;
+            }
+            .fc .fc-daygrid-day-frame {
+                min-height: 55px;
+                position: relative;
+            }
+            .fc .fc-toolbar-title {
+                font-size: 1.75em;
+                margin-bottom: 0.5rem;
+                margin-top: 0.3rem;
+            }
+            .fc .fc-toolbar {
+                align-items: center;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav id="navbar" class="navbar bg-primary">
+    <div class="bg-primary">
+    <div class="container">
+    <nav id="navbar" class="navbar">
         @if (Route::has('login'))
-            <div class="container">
-                    <div class="d-flex">
-                    <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class="d-inline-block me-3 align-text-center">
-                        <h3 class="header nav-brand mt-1 text-white">Agenda Kominfo Kab. Cirebon</h3>
-                    </div>
+            <div class="container-fluid justify-content-between d-flex">
+                <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class=" me-3 align-text-center">
+                <h3 class="header navbar-text text-white d-none d-md-block">Agenda Kominfo Kab. Cirebon</h3>
+                <h3 class="header navbar-text text-white fs-6 d-none d-sm-block d-md-none">Agenda Kominfo Kab. Cirebon</h3>
                 @auth
-                    <div class="ps-5"><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
+                    <div class=""><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
                     </div>
                 @else
-                    <div class="ps-5"><a href="{{ route('login') }}" class="btn btn-success">Log
-                            in</a></div>
+                    <div class=""><a href="{{ route('login') }}" class="btn btn-success">Login</a></div>
                 @endauth
             </div>
         @endif
     </nav>
+    </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 my-3">
@@ -137,11 +169,11 @@
             initialView: 'dayGridMonth',
             themeSystem: 'bootstrap5',
             events: '{{ route('events.list') }}',
-            editable: true,
-            dayMaxEventRows: true,
+            editable: false,
+            dayMaxEventRows: false,
             views: {
                 timeGrid: {
-                  dayMaxEventRows: 6 // adjust to 6 only for timeGridWeek/timeGridDay
+                  dayMaxEventRows: 4 // adjust to 6 only for timeGridWeek/timeGridDay
                 }
             },
             eventClick: function(info){
