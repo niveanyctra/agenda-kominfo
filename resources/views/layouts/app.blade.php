@@ -7,9 +7,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{--  <title>{{ config('app.name', 'Agenda Kegiatan Kominfo') }}</title>  --}}
-    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
+    <title>Dinas Komunikasi dan Informatika Kab Cirebon &#8211; Diskominfo Kab.Cirebon</title>
+    <script type="text/javascript">'use strict';var avia_is_mobile=!1;if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)&&'ontouchstart' in document.documentElement){avia_is_mobile=!0;document.documentElement.className+=' avia_mobile '}
+        else{document.documentElement.className+=' avia_desktop '};document.documentElement.className+=' js_active ';(function(){var e=['-webkit-','-moz-','-ms-',''],n='';for(var t in e){if(e[t]+'transform' in document.documentElement.style){document.documentElement.className+=' avia_transform ';n=e[t]+'transform'};if(e[t]+'perspective' in document.documentElement.style)document.documentElement.className+=' avia_transform3d '};if(typeof document.getElementsByClassName=='function'&&typeof document.documentElement.getBoundingClientRect=='function'&&avia_is_mobile==!1){if(n&&window.innerHeight>0){setTimeout(function(){var e=0,o={},a=0,t=document.getElementsByClassName('av-parallax'),i=window.pageYOffset||document.documentElement.scrollTop;for(e=0;e<t.length;e++){t[e].style.top='0px';o=t[e].getBoundingClientRect();a=Math.ceil((window.innerHeight+i-o.top)*0.3);t[e].style[n]='translate(0px, '+a+'px)';t[e].style.top='auto';t[e].className+=' enabled-parallax '}},50)}}})();</script><link rel="icon" href="https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/06/cropped-diskominfo-removebg-preview-1-32x32.png" sizes="32x32" />
 
-    <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
+    <link rel="icon" href="https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/06/cropped-diskominfo-removebg-preview-1-192x192.png" sizes="192x192" />
 
 
     <!-- Fonts -->
@@ -41,6 +43,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <style>
+        a{color:#007bff;text-decoration:none;background-color:transparent}
+      a:hover{color:#0056b3;text-decoration:none}
+    button:focus:not(:focus-visible){outline:0}
+    </style>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -139,7 +146,7 @@
                 <aside class="main-sidebar main-sidebar-custom sidebar-light-primary elevation-4">
                     <!-- Brand Logo -->
                     <a href="/" class="brand-link">
-                        <img src="{{ url('adminlte/img/cirebonkab.png') }}" alt=""
+                        <img src="https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/06/cropped-diskominfo-removebg-preview-1-192x192.png" alt=""
                             class="brand-image " style="opacity: .8">
                         <span class="brand-text font-weight-light">Agenda Kegiatan</span>
                     </a>
@@ -260,7 +267,8 @@
                 <!-- /.content-wrapper -->
 
                 <footer class="main-footer">
-                    <strong>Copyright &copy; PKL <a href="https://adminlte.io">SMKN 1 Kota Cirebon</a>.</strong>
+                    {{--  PKL SMKN 1 Cirebon Copyrights Reserved © 2023  --}}
+                    <strong><a target="_blank" href="https://github.com/niveanyctra/agenda-kominfo"> PKL </a> <a href="https://smkn1-cirebon.sch.id/" target="_blank">SMKN 1 Kota Cirebon</a> Copyright Reserved &copy; 2023</strong>
                 </footer>
 
                 <!-- Control Sidebar -->

@@ -9,10 +9,23 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
-    <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>
+    {{--  <title>Agenda Kegiatan KOMINFO Kab. Cirebon</title>  --}}
+    <title>Dinas Komunikasi dan Informatika Kab Cirebon &#8211; Diskominfo Kab.Cirebon</title>
+    <script type="text/javascript">'use strict';var avia_is_mobile=!1;if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)&&'ontouchstart' in document.documentElement){avia_is_mobile=!0;document.documentElement.className+=' avia_mobile '}
+        else{document.documentElement.className+=' avia_desktop '};document.documentElement.className+=' js_active ';(function(){var e=['-webkit-','-moz-','-ms-',''],n='';for(var t in e){if(e[t]+'transform' in document.documentElement.style){document.documentElement.className+=' avia_transform ';n=e[t]+'transform'};if(e[t]+'perspective' in document.documentElement.style)document.documentElement.className+=' avia_transform3d '};if(typeof document.getElementsByClassName=='function'&&typeof document.documentElement.getBoundingClientRect=='function'&&avia_is_mobile==!1){if(n&&window.innerHeight>0){setTimeout(function(){var e=0,o={},a=0,t=document.getElementsByClassName('av-parallax'),i=window.pageYOffset||document.documentElement.scrollTop;for(e=0;e<t.length;e++){t[e].style.top='0px';o=t[e].getBoundingClientRect();a=Math.ceil((window.innerHeight+i-o.top)*0.3);t[e].style[n]='translate(0px, '+a+'px)';t[e].style.top='auto';t[e].className+=' enabled-parallax '}},50)}}})();</script><link rel="icon" href="https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/06/cropped-diskominfo-removebg-preview-1-32x32.png" sizes="32x32" />
 
-    <link rel="shortcut icon" href="/adminlte/img/cirebonkab.png" type="image/x-icon">
+    <link rel="icon" href="https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/06/cropped-diskominfo-removebg-preview-1-192x192.png" sizes="192x192" />
     <style>
+        .footer_color {
+            background: #16819f url(https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/05/footer-scaled.jpg) center center no-repeat scroll;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
         @media only screen and (max-width: 512px) {
             .fc .fc-multimonth {
                 border: 1px solid var(--fc-border-color);
@@ -42,18 +55,19 @@
     </style>
 </head>
 <body>
-    <div class="bg-primary">
+    <div class="bg-white">
     <div class="container">
     <nav id="navbar" class="navbar">
         @if (Route::has('login'))
             <div class="container-fluid justify-content-between d-flex">
-                <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class=" me-3 align-text-center">
-                <h3 class="header navbar-text text-white d-none d-md-block">Agenda Kominfo Kab. Cirebon</h3>
+                <img src='https://diskominfo.cirebonkab.go.id/wp-content/uploads/2021/05/logoheader.png' height="90" class='alternate' alt='' title='logoheader' />
+                {{--  <img src="adminlte/img/cirebonkab.png" alt="Logo" width="50" height="50" class=" me-3 align-text-center">  --}}
+                {{--  <h3 class="header navbar-text text-info d-none d-md-block">Agenda Kominfo Kab. Cirebon</h3>  --}}
                 @auth
                     <div class=""><a href="{{ url('/dashboard') }}" class="btn btn-info">Dashboard</a>
                     </div>
                 @else
-                    <div class=""><a href="{{ route('login') }}" class="btn btn-success">Login</a></div>
+                    <div class=""><a href="{{ route('login') }}" class="btn btn-outline-primary">Login</a></div>
                 @endauth
             </div>
         @endif
@@ -145,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-primary" >
+    <div class="footer_color" >
         <footer class="row container">
             <div class="col-sm-4 ms-4">
                 <img class="ms-3 my-4" src="/adminlte/img/footerkominfo.png">
@@ -164,13 +178,32 @@
                 </div>
 
             </div>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-4">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-2">
                 <h5 class="ms-3 mt-4 text-white">PETA LOKASI</h5>
                 <iframe class="py-2 ms-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1175.0986719190741!2d108.47638729635923!3d-6.761425228544251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1e52319b27c1%3A0xb2df85a13850e781!2sDiskominfo%20Kabupaten%20Cirebon!5e0!3m2!1sid!2sid!4v1691379479344!5m2!1sid!2sid" width="300" height="200"></iframe>
             </div>
         </footer>
     </div>
+
+    <footer class="footer" style="background-color: #16819f; color:white;">
+        <div class='container py-3 justify-content-between d-flex'>
+
+            <span class='copyright'><a target="_blank" href="https://github.com/niveanyctra/agenda-kominfo"> PKL </a> <a href="https://smkn1-cirebon.sch.id/" target="_blank">SMKN 1 Kota Cirebon</a> Copyright Reserved &copy; 2023 </span>
+
+            <ul class='noLightbox social_bookmarks icon_count_3 d-flex gap-4'>
+                <li class='social_bookmarks_youtube av-social-link-youtube social_icon_1'>
+                    <a class="bi bi-youtube text-white" target="_blank" aria-label="Link to Youtube" href='https://www.youtube.com/channel/UC49K2eFphWQmbjdm0HZBx_A' aria-hidden='false' data-av_icon='' data-av_iconfont='entypo-fontello' title='Youtube' rel="noopener"><span class='avia_hidden_link_text'></span></a>
+                </li>
+                <li class='social_bookmarks_instagram av-social-link-instagram social_icon_2'>
+                    <a class="bi bi-instagram text-white" target="_blank" aria-label="Link to Instagram" href='https://www.instagram.com/diskominfokabcirebon/' aria-hidden='false' data-av_icon='' data-av_iconfont='entypo-fontello' title='Instagram' rel="noopener"><span class='avia_hidden_link_text'></span></a>
+                </li>
+                <li class='social_bookmarks_facebook av-social-link-facebook social_icon_3'>
+                    <a class="bi bi-facebook text-white" target="_blank" aria-label="Link to Facebook" href='https://www.facebook.com/diskominfokabcirebon.diskominfokabcirebon' aria-hidden='false' data-av_icon='' data-av_iconfont='entypo-fontello' title='Facebook' rel="noopener"><span class='avia_hidden_link_text'></span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
